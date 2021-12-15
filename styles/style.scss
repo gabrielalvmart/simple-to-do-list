@@ -1,0 +1,59 @@
+@import "./variables";
+
+@mixin flexCenterCard($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10vh;
+    
+}
+
+body{
+    background-color: $primary-light;
+    font-family: 'Andale Mono', monospace;
+    font-weight: normal;
+}
+
+.todo-div{
+    @include flexCenterCard(column);
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: $width;
+}
+
+.buttons{
+    @include flexCenterCard(row);
+    margin-top: 0;
+
+    button{
+        font-size: 1.6rem;
+        height: 3rem;
+        width: 3rem;
+        margin : 15px 15px 15px 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: $accent;
+    }
+    input{
+        height: 20px;
+    }
+}
+
+.title-area {
+    @include flexCenterCard(column);
+    .title{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        @include flexCenterCard(column);
+        font-weight: inherit;
+        padding: 10px 0px 10px 0px;
+        width: $width;
+        height: 3rem;
+        background-color: $primary;
+        color: black;
+
+    }
+}
