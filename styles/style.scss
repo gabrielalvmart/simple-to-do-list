@@ -25,6 +25,11 @@ body{
     width: $width;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .buttons{
     @include flexCenterCard(row);
     margin-top: 0;
@@ -37,7 +42,13 @@ body{
         border: none;
         border-radius: 10px;
         background-color: $accent;
+        transition: 0.4s;
+        &:hover {
+            height: 4.5rem;
+            width:4.5rem;
+        }
     }
+    
     input{
         height: 20px;
     }

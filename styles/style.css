@@ -28,6 +28,11 @@ body {
   width: 30vw;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,6 +62,13 @@ body {
   border: none;
   border-radius: 10px;
   background-color: #ffb3c1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.buttons button:hover {
+  height: 4.5rem;
+  width: 4.5rem;
 }
 
 .buttons input {

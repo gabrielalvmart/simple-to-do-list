@@ -4,9 +4,12 @@ const txt_input = document.getElementById('input_todo')
 const list = document.getElementById('todos')
 
 btn_insert.addEventListener('click', () => {
-    console.log(txt_input.value)
-    addTodo(txt_input.value)
-    txt_input.value = ""
+    if(txt_input.value.length != 0){
+        addTodo(txt_input.value)
+        txt_input.value = ""
+    } else{
+        txt_input.placeholder = placeholders[Math.floor(Math.random()*placeholders.length)]
+    }
     checkTasks()
 })
 
@@ -33,3 +36,13 @@ function checkTasks(){
         document.getElementById('txt-available').innerText = 'Tasks left to do:'
     }
 }
+
+const placeholders = [
+    "Gotta write something!",
+    "I'm waiting...",
+    "You got nothing to do?",
+    "Come on, I'm empty!",
+    "Fill me up, baby!",
+    "( ͡° ͜ʖ ͡°)",
+    "¯\\_(ツ)_/¯"
+]
